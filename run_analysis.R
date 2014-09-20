@@ -56,4 +56,3 @@ tidy <- tidy[order(tidy$Subject),]
 rownames(tidy) <- NULL
 
 write.table(tidy, "./data/tidy.txt", sep = ",", quote = FALSE)
-T <- read.table("./data/tidy.txt", sep = ",")

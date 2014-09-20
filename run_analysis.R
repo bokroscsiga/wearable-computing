@@ -48,9 +48,12 @@ act[act==6] <- labels[6]
 mData <- cbind(ttData, sub, act)
 
 #creating a tidy dataset with the average of each variable for each activity and each subject
-tidy <- aggregate(mData3[ ,1:66], list(Subject=mData3$Subject, Activity=mData3$Activity),
-                  data = mData3, FUN = mean)
+tidy <- aggregate(mData[ ,1:66], list(Subject=mData$Subject, Activity=mData$Activity),
+                  data = mData, FUN = mean)
 
 #reordering dataset
 tidy <- tidy[order(tidy$Subject),]
 rownames(tidy) <- NULL
+
+write.table(tidy, "./data/tidy.txt", sep = ",", quote = FALSE)
+T <- read.table("./data/tidy.txt", sep = ",")

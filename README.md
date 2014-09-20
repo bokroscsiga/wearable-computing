@@ -15,3 +15,7 @@ Also, notice that I took kept variables from the raw dataset that had 'mean' and
 
 Variable names are as descriptive as they are in the original raw dataset. Please read the cited description of them in 'CodeBook.md'.
 
+For the description of the script resulting 'tidy.txt' please take a look at the comments in 'run_analysis.R' at the relevant parts.
+
+To read in 'tidy.txt', please use the following command in R: read.table("./tidy.txt", sep = ",")
+

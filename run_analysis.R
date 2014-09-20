@@ -55,4 +55,5 @@ tidy <- aggregate(mData[ ,1:66], list(Subject=mData$Subject, Activity=mData$Acti
 tidy <- tidy[order(tidy$Subject),]
 rownames(tidy) <- NULL
 
-write.table(tidy, "./data/tidy.txt", sep = ",", quote = FALSE)
+#creating 'tidy.txt'
+write.table(tidy, "./data/tidy.txt", sep = ",", quote = FALSE, row.name = FALSE)

@@ -54,6 +54,3 @@ tidy <- aggregate(mData3[ ,1:66], list(Subject=mData3$Subject, Activity=mData3$A
 #reordering dataset
 tidy <- tidy[order(tidy$Subject),]
 rownames(tidy) <- NULL
-
-
-
